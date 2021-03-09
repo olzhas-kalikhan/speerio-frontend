@@ -9,7 +9,7 @@ const menuTransition = keyframes`
         height: 50px;
     }
     to {
-        border-radius: 50%;
+        border-radius: 0% 0% 80%  0%;
         background-color: #1FE1E9;
 
     }
@@ -17,20 +17,20 @@ const menuTransition = keyframes`
 const menuShrink = keyframes`
     from{
         background-color:#1FE1E9;
-        border-radius: 50%;
+        border-radius: 0% 0% 80%  0%;
         width: 400px;
         height: 350px;
     }
     to{
         width: 100px;
         height: 50px;
-        border-radius: 50%;
+        border-radius: 0% 0% 80%  0%;
     }
 `
 
 const Header = styled.div`
-    margin-top: 5%;
-    margin-left: 5%;
+    padding-top: 5%;
+    padding-left: 5%;
     color: #FFFFFF;
     opacity: 1;
     display: flex;
@@ -40,17 +40,18 @@ const Header = styled.div`
         cursor: pointer;
     }   
     ${props => props.active ? css`
-        border-radius: 50%;
+        border-radius: 0% 0% 80%  0%;
         width: 400px;
         height: 350px;
         animation: ${menuTransition} 1s ease 1 ;
         background-color: #1FE1E9;
+
     `:
         css`
         width: 400px;
         animation: ${menuShrink} 1s ease 1 ;
     `}
-      
+    z-index:9;
     
 `
 const Wrapper = styled.div`
@@ -71,7 +72,6 @@ const Title = styled.h2`
 `
 const List = styled.ul`
     list-style-type:  none;
-    padding-top: 50px;
     text-align: left;
     font-size: 1.8rem;
     font-weight: 700;
