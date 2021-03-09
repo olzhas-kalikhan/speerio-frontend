@@ -1,3 +1,13 @@
+# Frontend Assignment (speerio)
+
+# Dependencies
+
+* react 
+* styled-components
+* styled-icons
+* react-scroll
+* debounce
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
