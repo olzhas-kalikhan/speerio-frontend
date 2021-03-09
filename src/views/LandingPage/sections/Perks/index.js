@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { Container } from '@components/Container'
-import { Title, Subtitle, Subtitle2 } from '@components/Titles'
+import { Title, Subtitle } from '@components/Titles'
 const PerksContainer = styled.div`
     display: flex;
 

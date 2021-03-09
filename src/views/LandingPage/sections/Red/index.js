@@ -4,7 +4,6 @@ import imgSpeaker2 from '@assets/LandingPage/mediumSpeaker2.png'
 import { Title, Subtitle2 } from '@components/Titles'
 import audioFile from '@assets/audio/bensound-onceagain.mp3'
 import { useEffect, useState } from 'react'
-import useWindowDimensions from '@utilities/windowDimensionsHook'
 import { LeftSection, RightSection, Image, MusicButton } from './styles'
 import CTAButton from '@components/buttons/CTAButton'
 const Red = ({ sectionId }) => {
@@ -32,6 +31,7 @@ const Red = ({ sectionId }) => {
     }
 
     useEffect(() => {
+        
         setAudioControls(({ playAudio, stopAudio }) => {
             playAudio = () => {
                 initAudio()
@@ -44,6 +44,7 @@ const Red = ({ sectionId }) => {
             }
             return { playAudio, stopAudio }
         })
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [source])
 
     return (

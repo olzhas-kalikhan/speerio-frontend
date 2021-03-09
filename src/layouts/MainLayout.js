@@ -29,16 +29,13 @@ const menuShrink = keyframes`
 `
 
 const Header = styled.div`
+    margin-top: 5%;
+    margin-left: 5%;
     color: #FFFFFF;
-    top: -100px;
-    left: -80px;
     opacity: 1;
     display: flex;
     flex-direction: column;
     position: fixed;
-    padding-top: 160px;
-    padding-left: 140px;
-    z-index: 6;
     :hover {
         cursor: pointer;
     }   
@@ -49,7 +46,7 @@ const Header = styled.div`
         animation: ${menuTransition} 1s ease 1 ;
         background-color: #1FE1E9;
     `:
-    css`
+        css`
         width: 400px;
         animation: ${menuShrink} 1s ease 1 ;
     `}
@@ -57,18 +54,18 @@ const Header = styled.div`
     
 `
 const Wrapper = styled.div`
-    display: flex;
-    flex-direction: column;
+
     width: 100%; 
     overflow: hidden;
 `
+
 const Title = styled.h2`
+    
     font-size: 2.5rem;
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     letter-spacing: 4.8px;
     margin: 0 20px;
-    position: absolute;
     display:flex;
     flex-wrap: nowrap;
 `
@@ -102,8 +99,9 @@ const MainLayouts = ({ children, onWheel }) => {
                         <ListItem>PRICING</ListItem>
                     </List>}
             </Header>
-
-            { children}
+            <div>
+                {children}
+            </div>
         </Wrapper >
     )
 }

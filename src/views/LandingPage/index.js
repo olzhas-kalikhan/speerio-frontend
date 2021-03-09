@@ -1,4 +1,4 @@
-import React, { useEffect, useState, createRef } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import MainLayout from '@layouts/MainLayout'
 import Hero from './sections/Hero'
@@ -6,7 +6,7 @@ import Red from './sections/Red'
 import Yellow from './sections/Yellow'
 import Perks from './sections/Perks'
 import Reviews from './sections/Reviews'
-import { Link, Element, animateScroll as scroll, scroller } from "react-scroll";
+import { Element, scroller } from "react-scroll";
 
 const sections = [Hero, Red, Yellow, Perks, Reviews]
 
@@ -23,9 +23,7 @@ const LandingPage = () => {
         })
         console.log(currentSection)
     }
-    useEffect(() => {
-        srollToSection()
-    }, [currentSection])
+    useEffect(srollToSection, [currentSection])
     return (
         <MainLayout onWheel={handleWheel}>
             {sections.map((Component, i) =>

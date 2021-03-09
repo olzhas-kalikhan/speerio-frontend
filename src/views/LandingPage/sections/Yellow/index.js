@@ -7,6 +7,7 @@ import { Title, Subtitle2 } from '@components/Titles'
 const Section = styled.div`
     width: ${({ width }) => width};
     margin-left: 40%;
+    position: relative;
 `
 
 const Yellow = ({ sectionId }) => {
@@ -17,8 +18,8 @@ const Yellow = ({ sectionId }) => {
                     <Title shadow>FRONT ROW SEATS</Title>
                     <Subtitle2 color='#000000' shadow> Experience concerts up close and personal.</Subtitle2>
                 </Section>
-                <Canvas color='#FFB33F' />
             </ScreenWrapper>
+            <Canvas color='#FFB33F' />
 
         </Container>
     )

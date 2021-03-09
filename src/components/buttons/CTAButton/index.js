@@ -1,5 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
-import styled, { css } from 'styled-components'
+import { useRef, useState } from 'react'
 import './styles.css'
 
 const CTAButton = ({ color, small, children }) => {
