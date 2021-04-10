@@ -1,5 +1,8 @@
 # Frontend Assignment (speerio)
 
+## Demo
+https://expcon-assignment.netlify.app/
+
 # Dependencies
 
 * react 
